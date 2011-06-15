@@ -1,25 +1,22 @@
-#########################################################################
-# FILENAME:  Makefile                                                   #
-# PURPOSE:   Makefile for cut2                                          #
-# AUTHOR:    Fillafer Martin (unki2aut@gmail.com)                       #
-# DATE:      07.06.2009                                                 #
-#########################################################################
+################################################################################
+# FILENAME:  Makefile                                                          #
+# PURPOSE:   Makefile for tokenize                                             #
+# AUTHOR:    (c) Martin Fillafer (unki2aut@gmail.com)                          #
+# DATE:      2011-06-15                                                        #
+################################################################################
 
-
-#########################################################################
 CC=gcc
-CFLAGS=-ansi -pedantic -Wall -g -D_XOPEN_SOURCE=500
+CFLAGS=-ansi -pedantic -Wall -g -D_XOPEN_SOURCE=500# -DDEBUG
 
-all: cut2
+all: tokenize Makefile
 
-cut2: cut2.o
-	$(CC) -o cut2 cut2.o
+tokenize: tokenize.o
+	$(CC) -o tokenize tokenize.o
 
-cut2.o: cut2.c
-	$(CC) $(CFLAGS) -c cut2.c
-
+tokenize.o: tokenize.c
+	$(CC) $(CFLAGS) -c tokenize.c
 	
 .PHONY: clean
 
 clean:
-	rm cut2 cut2.o
+	rm tokenize tokenize.o

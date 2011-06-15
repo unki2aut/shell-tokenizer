@@ -1,0 +1,10 @@
+--------------------------------------------------------------------------------
+                             Linux Shell Tokenizer
+--------------------------------------------------------------------------------
+
+As delimiter you can use any string you want and it will be left out in the
+result. Each token is issued in a new line.
+
+Usage: tokenize -d <delim> [- | filename]
+
+Have fun :)
